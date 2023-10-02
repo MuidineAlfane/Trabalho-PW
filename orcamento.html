@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Orçamento</title>
+    <link rel="stylesheet" href="./estilizacao/admin.css" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">Evento</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="admin.html" class="">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Painel</span>
+          </a>
+        </li>
+        <li>
+          <a href="eventos.html" class="active">
+            <i class="bx bx-box"></i>
+            <span class="links_name">Eventos</span>
+          </a>
+        </li>
+        <li>
+          <a href="financas.html">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Finanças</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="tarefas.html">
+            <i class="bx bx-book-alt"></i>
+            <span class="links_name">Tarefas</span>
+          </a>
+        </li>
+        <li>
+          <a href="funcionario.html">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Funcionarios</span>
+          </a>
+        </li>
+         <li>
+          <a href="contaadmin.html" >
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Minha Conta</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="index.html">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Sair</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+          <span class="dashboard">Detalhes do Evento</span>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Procurar" />
+          <i class="bx bx-search"></i>
+        </div>
+        <div class="profile-details">
+            <img src="./Imagens/profile.jpg" alt="" />
+          <span class="admin_name">Muidine Alfane</span>
+        </div>
+      </nav>
+
+<br><br><br>
+
+<div class="home-content">
+
+        <div class="sales-boxes">
+          <div class="recent-sales box">
+            <div class="title">ID: 1</div>
+            <div class="sales-details">
+              Nome : Casamento<br>
+              <input type="number" placeholder="Digite o valor a orcar" required name="">
+               <textarea placeholder="Deixe os detalhes"></textarea>
+                            
+              <a href="eventos.html">Enviar</a>
+          </div>
+        </div>
+      </div>
+
+    </div></section>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+    </script>
+  </body>
+</html>

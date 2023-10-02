@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesso</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .checkmark::before {
+            content: '\2713'; /* Código do caractere de marca de seleção Unicode */
+            font-size: 200px; /* Tamanho maior para tornar a marca de seleção três vezes mais grossa */
+            color: #fff;
+        }
+
+        .message {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px; /* Espaço abaixo do texto */
+        }
+
+        .button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="checkmark"></div>
+    </div>
+    <div class="message">Uma mensagem de redefinição foi enviada para o seu email!</div>
+    <a href="login.html"><button class="button">Continuar</button></a>
+</body>
+</html>

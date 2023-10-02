@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Area Administrativa</title>
+    <link rel="stylesheet" href="./estilizacao/admin.css" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">Bom-Evento</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="admin.html" class="active">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Painel</span>
+          </a>
+        </li>
+        <li>
+          <a href="eventos.html">
+            <i class="bx bx-box"></i>
+            <span class="links_name">Eventos</span>
+          </a>
+        </li>
+        <li>
+          <a href="financas.html">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Finanças</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="tarefas.html">
+            <i class="bx bx-book-alt"></i>
+            <span class="links_name">Tarefas</span>
+          </a>
+        </li>
+        <li>
+          <a href="funcionario.html">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Funcionarios</span>
+          </a>
+        </li>
+         <li>
+          <a href="contaadmin.html">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Minha Conta</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="index.html">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Sair</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+          <span class="dashboard">Area Adminstrativa</span>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Procurar" />
+          <i class="bx bx-search"></i>
+        </div>
+        <div class="profile-details">
+          <img src="./Imagens/profile.jpg" alt="" />
+          <span class="admin_name">Muidine Alfane</span>
+        </div>
+      </nav>
+      <div class="home-content">
+        <div class="overview-boxes">
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Eventos Realizados</div>
+              <div class="number">$12038,18mt</div>
+              <div class="indicator">
+                <span class="text">Eventos com estado terminado</span>
+              </div>
+            </div>
+            <i class="bx bxs-cart-add cart two"></i>
+          </div>
+           <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Pendente</div>
+              <div class="number">$5250mt</div>
+              <div class="indicator">
+                <i class="bx bx-up-arrow-alt"></i>
+                <span class="text">O cliente Tem 30 dias para pagar</span>
+              </div>
+            </div>
+            <i class="bx bx-cart cart three"></i>
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Eventos Rejeitados</div>
+              <div class="number">$1000mt</div>
+              <div class="indicator">
+                <i class="bx bxs-cart-download cart four"></i>
+                <span class="text">Tempo de Pagamento esgotado</span>
+                 <i class="bx bx-down-arrow-alt down"></i>
+                 <span class="text">Cancelamento prlo cliente.</span>
+              </div>
+            </div>
+            <i class="bx bxs-cart-download cart four"></i>
+          </div>
+        </div>
+        <div class="sales-boxes">
+          <div class="recent-sales box">
+            <div class="title">Últimos Eventos</div>
+            <div class="sales-details">
+              <ul class="details">
+                <li class="topic">Data</li>
+                <li><a href="#">18 de Agosto - 2023</a></li>
+                <li><a href="#">10 de Setembro - 2023</a></li>
+                <li><a href="#">11 de Maio - 2023</a></li>
+                <li><a href="#">02 de Junho - 2023</a></li>
+                <li><a href="#">07 de Abril - 2023</a></li>
+              </ul>
+              <ul class="details">
+                <li class="topic">Cliente</li>
+                <li><a href="#">Ana Maria</a></li>
+                <li><a href="#">Jorge Daniel</a></li>
+                <li><a href="#">Mingos Silva</a></li>
+                <li><a href="#">Mateus Manuel</a></li>
+                <li><a href="#">Martins Vasco</a></li>
+              </ul>
+              <ul class="details">
+                <li class="topic">Estado</li>
+                <li><a href="#">Terminado</a></li>
+                <li><a href="#">Terminado</a></li>
+                <li><a href="#">Cancelado</a></li>
+                <li><a href="#">Pendente</a></li>
+                <li><a href="#">Yerminado</a></li>
+               
+              </ul>
+              <ul class="details">
+                <li class="topic">Total</li>
+                <li><a href="#">$12000mt</a></li>
+                <li><a href="#">$7200mt</a></li>
+                <li><a href="#">$1100mt</a></li>
+                <li><a href="#">$170mt</a></li>
+                <li><a href="#">$50,000,00</a></li>
+              </ul>
+            </div>
+            <div class="button">
+              <a href="eventos.html">Mostrar Mais</a>
+            </div>
+          </div>
+          
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+    </script>
+  </body>
+</html>

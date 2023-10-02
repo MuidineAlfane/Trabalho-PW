@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Eventos</title>
+     <link rel="stylesheet" href="./estilizacao/admin.css" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">Bom-Evento</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="admin.html" class="">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Painel</span>
+          </a>
+        </li>
+        <li>
+          <a href="eventos.html" class="active">
+            <i class="bx bx-box"></i>
+            <span class="links_name">Eventos</span>
+          </a>
+        </li>
+        <li>
+          <a href="financas.html">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Finanças</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="tarefas.html">
+            <i class="bx bx-book-alt"></i>
+            <span class="links_name">Tarefas</span>
+          </a>
+        </li>
+        <li>
+          <a href="funcionario.html">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Funcionarios</span>
+          </a>
+        </li>
+         <li>
+          <a href="contaadmin.html" >
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Minha Conta</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="index.html">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Sair</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+          <span class="dashboard">Eventos</span>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Procurar" />
+          <i class="bx bx-search"></i>
+        </div>
+        <div class="profile-details">
+          <img src="./Imagens/profile.jpg" alt="" />
+          <span class="admin_name">Muidine Alfane</span>
+        </div>
+      </nav>
+
+<br><br><br>
+<br><br><br>
+
+<h3>Filtar por:</h3>
+    <label for="categoria">Categoria:</label>
+    <select id="categoria" ">
+        <option value="Todas">Todas</option>
+        <option value="Casamento">Casamento</option>
+        <option value="Graduacao">Graduação</option>
+        <option value="Comemoracao">Comemoração</option>
+    </select>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome"  ">
+    <label for="data">Data:</label>
+    <input type="text" id="data" ">
+
+    <table border="1" id="evento_table">
+        <!-- Seu código HTML da tabela de eventos aqui -->
+    </table>
+
+<br>
+<br>
+  <p><table border="1" id="evento_table">
+        <tr>
+            <th>ID</th>
+            <th>Nome </th>
+            <th>Data</th>
+            <th>Local</th>
+            <th>Categoria</th>
+            <th>Descricao</th>
+            <th>Nr. de Pessoas</th>
+            <th>Valor a Pagar</th>
+            <th>Ações</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Casamento</td>
+            <td>2023-10-15</td>
+            <td>spacy</td>
+            <td>Casamento</td>
+            <td>Este e um casamento de...</td>
+            <td>100</td>
+            <td>0,00</td>
+            <td>
+      
+            <a href="orcar.html">  <button onclick="aprovar(2)">Orçamento</button></a>
+            <a href="rejeitar.html">  <button onclick="aprovar(2)">Rejeitar</button></a>
+               
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Graduacao</td>
+            <td>2023-02-20</td>
+            <td>Muxara</td>
+            <td>Graduacao</td>
+            <td>Esta graduacao</td>
+            <td>324</td>
+            <td>7500.00</td>
+            <td>
+       
+                  <a href="aprovado.html">  <button onclick="aprovar(2)">Aprovar</button></a>
+                    <a href="rejeitar.html">  <button onclick="aprovar(2)">Rejeitar</button></a>
+           
+            </td>
+            <tr>
+            <td>3</td>
+            <td>Lobolo</td>
+            <td>2023-20-10</td>
+            <td>Wimbe sun</td>
+            <td>Casamento</td>
+            <td>Cidade de Pemba</td>
+            <td>2000</td>
+            <td>400000.00</td>
+            <td>
+          
+              <a href="aprovado.html">  <button onclick="aprovar(2)">Aprovar</button></a>
+                 <a href="rejeitar.html">  <button onclick="aprovar(2)">Rejeitar</button></a>
+            </td>
+        </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Aniversario</td>
+            <td>2023-01-01</td>
+            <td>spacy</td>
+            <td>Comemoracao</td>
+            <td>Este é um aniversario de...</td>
+            <td>100</td>
+            <td>20.362.00</td>
+            <td>
+      
+        
+            <a href="terminar.html">  <button onclick="aprovar(2)">Terminar</button></a>
+               
+            </td>
+         </tr>
+</p>  
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+    </script>
+  </body>
+</html>
